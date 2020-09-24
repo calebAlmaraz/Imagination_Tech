@@ -13,18 +13,6 @@
 		</div>
 	</header>
 	<main id="container-main">
-		<div class="user user-one">
-			<a href="/director_of_research.html">
-				<div class="profile-card">
-					<div class="picture">
-						<img src="images/hombre.png">
-					</div>
-					<div class="info">
-						<h3>Director of Research</h3>
-					</div>
-				</div>
-			</a>
-		</div>
 		<div class="user user-two">
 			<a href="/phd_student.html">
 				<div class="profile-card">
@@ -33,18 +21,6 @@
 					</div>
 					<div class="info">
 						<h3>PhD Student</h3>
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="user user-three">
-			<a href="/manager.html">
-				<div class="profile-card">
-					<div class="picture">
-						<img src="images/hombre (1).png">
-					</div>
-					<div class="info">
-						<h3>Manager</h3>
 					</div>
 				</div>
 			</a>
