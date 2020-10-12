@@ -1,0 +1,48 @@
+{# templates/symfony/home_page/index.html.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block stylesheets %}
+        {# 'app' must match the first argument to addEntry() in webpack.config.js #}
+        {{ encore_entry_link_tags('app') }}
+
+        <!-- Renders a link tag (if your module requires any CSS)
+                <link rel="stylesheet" href="/build/app.css"> -->
+    {% endblock %}
+	<meta charset="utf-8">
+	<title>Data Visualisation</title>
+	<!--<script type="text/javascript" src="d3/d3.v4.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/> -->
+
+<body>
+	<header class="header-main">
+		<div>
+			<h1>Data Visualization Coursework</h1>
+		</div>
+	</header>
+	<main id="container-main">
+		<div class="user user-two">
+			<a href="/phd_student">
+				<div class="profile-card">
+					<div class="picture">
+						<img src="images/chica.png">
+					</div>
+					<div class="info">
+						<h3>PhD Student</h3>
+					</div>
+				</div>
+			</a>
+		</div>
+	</main>
+	<footer>
+		Icons designed by <a href="https://www.flaticon.es/autores/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
+    </footer>
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+
+        <!-- Renders app.js & a webpack runtime.js file
+            <script src="/build/runtime.js"></script>
+            <script src="/build/app.js"></script> -->
+    {% endblock %}
+</body>
+</html>
