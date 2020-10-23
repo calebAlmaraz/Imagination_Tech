@@ -1,9 +1,21 @@
 {
   "build/app.css": "/build/app.css",
   "build/app.js": "/build/app.js",
+  "build/beeWar.css": "/build/beeWar.css",
+  "build/beeWar.js": "/build/beeWar.js",
+  "build/beeWar~exercises~resume.css": "/build/beeWar~exercises~resume.css",
+  "build/beeWar~exercises~resume.js": "/build/beeWar~exercises~resume.js",
   "build/dataVisualisation.css": "/build/dataVisualisation.css",
   "build/dataVisualisation.js": "/build/dataVisualisation.js",
+  "build/exercises.css": "/build/exercises.css",
+  "build/exercises.js": "/build/exercises.js",
+  "build/resume.js": "/build/resume.js",
   "build/runtime.js": "/build/runtime.js",
-  "build/vendors~app.js": "/build/vendors~app.js",
-  "build/vendors~dataVisualisation.js": "/build/vendors~dataVisualisation.js"
+  "build/vendors~app~beeWar~exercises~resume.js": "/build/vendors~app~beeWar~exercises~resume.js",
+  "build/vendors~beeWar.js": "/build/vendors~beeWar.js",
+  "build/vendors~beeWar~exercises.js": "/build/vendors~beeWar~exercises.js",
+  "build/vendors~beeWar~exercises~resume.js": "/build/vendors~beeWar~exercises~resume.js",
+  "build/images/bumblebee.png": "/build/images/bumblebee.8c14f701.png",
+  "build/images/leafcutter.png": "/build/images/leafcutter.2c77ed3c.png",
+  "build/images/vs.png": "/build/images/vs.58d70b9d.png"
 }

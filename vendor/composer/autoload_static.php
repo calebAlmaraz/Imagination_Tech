@@ -125,6 +125,10 @@ class ComposerStaticInit3da52341f7ebfb4781ce986191e436e9
             'Laminas\\EventManager\\' => 21,
             'Laminas\\Code\\' => 13,
         ),
+        'F' => 
+        array (
+            'FOS\\JsRoutingBundle\\' => 20,
+        ),
         'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
@@ -485,6 +489,10 @@ class ComposerStaticInit3da52341f7ebfb4781ce986191e436e9
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-code/src',
         ),
+        'FOS\\JsRoutingBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -562,9 +570,27 @@ class ComposerStaticInit3da52341f7ebfb4781ce986191e436e9
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'J' => 
+        array (
+            'JsonpCallbackValidator' => 
+            array (
+                0 => __DIR__ . '/..' . '/willdurand/jsonp-callback-validator/src',
+            ),
+        ),
+    );
+
     public static $classMap = array (
+        'App\\Controller\\BeeWar\\Bee' => __DIR__ . '/../..' . '/src/Controller/BeeWar/Bee.php',
+        'App\\Controller\\BeeWar\\BeeWar' => __DIR__ . '/../..' . '/src/Controller/BeeWar/BeeWar.php',
+        'App\\Controller\\BeeWar\\Colony' => __DIR__ . '/../..' . '/src/Controller/BeeWar/Colony.php',
+        'App\\Controller\\BeeWar\\Rules' => __DIR__ . '/../..' . '/src/Controller/BeeWar/Rules.php',
+        'App\\Controller\\BeeWar\\War_Zone' => __DIR__ . '/../..' . '/src/Controller/BeeWar/War_Zone.php',
+        'App\\Controller\\Exercises\\Data_Structures' => __DIR__ . '/../..' . '/src/Controller/Exercises/Data_Structures.php',
+        'App\\Controller\\Exercises\\Exercises' => __DIR__ . '/../..' . '/src/Controller/Exercises/Exercises.php',
         'App\\Controller\\HomePage\\Init' => __DIR__ . '/../..' . '/src/Controller/HomePage/Init.php',
         'App\\Controller\\LuckyController' => __DIR__ . '/../..' . '/src/Controller/LuckyController.php',
+        'App\\Controller\\Resume\\Resume' => __DIR__ . '/../..' . '/src/Controller/Resume/Resume.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'Collator' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Collator.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Command\\CreateDatabaseDoctrineCommand' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Command/CreateDatabaseDoctrineCommand.php',
@@ -1694,8 +1720,22 @@ class ComposerStaticInit3da52341f7ebfb4781ce986191e436e9
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/Warning.php',
+        'FOS\\JsRoutingBundle\\Command\\DumpCommand' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/Command/DumpCommand.php',
+        'FOS\\JsRoutingBundle\\Command\\RouterDebugExposedCommand' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/Command/RouterDebugExposedCommand.php',
+        'FOS\\JsRoutingBundle\\Controller\\Controller' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/Controller/Controller.php',
+        'FOS\\JsRoutingBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/DependencyInjection/Configuration.php',
+        'FOS\\JsRoutingBundle\\DependencyInjection\\FOSJsRoutingExtension' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/DependencyInjection/FOSJsRoutingExtension.php',
+        'FOS\\JsRoutingBundle\\Extractor\\ExposedRoutesExtractor' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/Extractor/ExposedRoutesExtractor.php',
+        'FOS\\JsRoutingBundle\\Extractor\\ExposedRoutesExtractorInterface' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/Extractor/ExposedRoutesExtractorInterface.php',
+        'FOS\\JsRoutingBundle\\FOSJsRoutingBundle' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/FOSJsRoutingBundle.php',
+        'FOS\\JsRoutingBundle\\Response\\RoutesResponse' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/Response/RoutesResponse.php',
+        'FOS\\JsRoutingBundle\\Serializer\\Denormalizer\\RouteCollectionDenormalizer' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/Serializer/Denormalizer/RouteCollectionDenormalizer.php',
+        'FOS\\JsRoutingBundle\\Serializer\\Normalizer\\RouteCollectionNormalizer' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/Serializer/Normalizer/RouteCollectionNormalizer.php',
+        'FOS\\JsRoutingBundle\\Serializer\\Normalizer\\RoutesResponseNormalizer' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/Serializer/Normalizer/RoutesResponseNormalizer.php',
+        'FOS\\JsRoutingBundle\\Util\\CacheControlConfig' => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle/Util/CacheControlConfig.php',
         'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/IntlDateFormatter.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'JsonpCallbackValidator' => __DIR__ . '/..' . '/willdurand/jsonp-callback-validator/src/JsonpCallbackValidator.php',
         'Laminas\\Code\\Annotation\\AnnotationCollection' => __DIR__ . '/..' . '/laminas/laminas-code/src/Annotation/AnnotationCollection.php',
         'Laminas\\Code\\Annotation\\AnnotationInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Annotation/AnnotationInterface.php',
         'Laminas\\Code\\Annotation\\AnnotationManager' => __DIR__ . '/..' . '/laminas/laminas-code/src/Annotation/AnnotationManager.php',
@@ -5209,6 +5249,7 @@ class ComposerStaticInit3da52341f7ebfb4781ce986191e436e9
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3da52341f7ebfb4781ce986191e436e9::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3da52341f7ebfb4781ce986191e436e9::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit3da52341f7ebfb4781ce986191e436e9::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit3da52341f7ebfb4781ce986191e436e9::$classMap;
 
         }, null, ClassLoader::class);

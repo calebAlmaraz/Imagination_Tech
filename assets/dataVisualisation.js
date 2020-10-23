@@ -34,3 +34,4 @@ import './styles/css/dataVisualisation/phd/tree-v001.css';
 // import viewsDendrogram from './js/dataVisualisation/views/phd/dendrogram';
 
 
+window.onbeforeunload = function() {window.scrollTo(0,0);}

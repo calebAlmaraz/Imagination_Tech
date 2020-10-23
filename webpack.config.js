@@ -25,6 +25,9 @@ Encore
      */
     .addEntry('app', './assets/app.js')
     .addEntry('dataVisualisation', './assets/dataVisualisation.js')
+    .addEntry('resume', './assets/resume.js')
+    .addEntry('exercises', './assets/exercises.js')
+    .addEntry('beeWar', './assets/beeWar.js')
     //.addEntry('page2', './assets/page2.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
@@ -53,8 +56,11 @@ Encore
         config.corejs = 3;
     })
 
+
+    // Adding global scss
+    //.addStyleEntry('global', './assets/styles/scss/global.scss')
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()

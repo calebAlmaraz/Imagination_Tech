@@ -28,8 +28,39 @@ services:
         tags: ['controller.service_arguments']
 
     App\Controller\HomePage\:
-        resource: '../src/Controller/HomePage'
+        resource: '../src/Controller/HomePage/'
         tags: ['controller.service_arguments']
+
+    App\Controller\BeeWar\:
+        resource: '../src/Controller/BeeWar/'
+        tags: ['controller.service_arguments']
+    
+    App\Controller\Resume\:
+        resource: '../src/Controller/Resume'
+        tags: ['controller.service_arguments']
+
+    App\Controller\Exercises\:
+        resource: '../src/Controller/Exercises'
+        tags: ['controller.service_arguments']
+        # autowire: true
+    
+    App\Controller\Exercises\Data_Structures:
+        autowire: true
+    
+    App\Controller\BeeWar\BeeWar:
+        autowire: true
+
+    App\Controller\BeeWar\Bee:
+        autowire: true
+    
+    App\Controller\BeeWar\Colony:
+        autowire: true
+
+    App\Controller\BeeWar\War_Zone:
+        autowire: true
+
+    App\Controller\BeeWar\Rules:
+        autowire: true
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

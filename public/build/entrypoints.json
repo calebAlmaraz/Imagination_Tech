@@ -3,7 +3,7 @@
     "app": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~app.js",
+        "/build/vendors~app~beeWar~exercises~resume.js",
         "/build/app.js"
       ],
       "css": [
@@ -17,6 +17,47 @@
       ],
       "css": [
         "/build/dataVisualisation.css"
+      ]
+    },
+    "resume": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~app~beeWar~exercises~resume.js",
+        "/build/vendors~beeWar~exercises~resume.js",
+        "/build/beeWar~exercises~resume.js",
+        "/build/resume.js"
+      ],
+      "css": [
+        "/build/beeWar~exercises~resume.css"
+      ]
+    },
+    "exercises": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~app~beeWar~exercises~resume.js",
+        "/build/vendors~beeWar~exercises~resume.js",
+        "/build/vendors~beeWar~exercises.js",
+        "/build/beeWar~exercises~resume.js",
+        "/build/exercises.js"
+      ],
+      "css": [
+        "/build/beeWar~exercises~resume.css",
+        "/build/exercises.css"
+      ]
+    },
+    "beeWar": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~app~beeWar~exercises~resume.js",
+        "/build/vendors~beeWar~exercises~resume.js",
+        "/build/vendors~beeWar~exercises.js",
+        "/build/vendors~beeWar.js",
+        "/build/beeWar~exercises~resume.js",
+        "/build/beeWar.js"
+      ],
+      "css": [
+        "/build/beeWar~exercises~resume.css",
+        "/build/beeWar.css"
       ]
     }
   }

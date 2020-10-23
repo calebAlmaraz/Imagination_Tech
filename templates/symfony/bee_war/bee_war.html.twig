@@ -1,0 +1,116 @@
+{# templates/symfony/bee_war/bee_war.html.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Josue Almaraz</title>
+	{# CSS #}
+	{% block stylesheets %}
+        {{ encore_entry_link_tags('beeWar') }}
+	{% endblock %}
+</head>
+<body>
+	<div class="container-fluid w-100 h-100">
+        <div class="row pb-4 w-auto">
+            <div class="col-1 pl-4">
+                <div class="row pl-1 round justify-content-center" style="font-size: 20px;">Colony 1</div>
+                <div class="row pl-1 round justify-content-center" style="font-size: 20px; background-color: #c39e17;">Bumblebee</div>
+                <div class="row pl-1 round justify-content-center" style="font-size: 20px; background-color: #ffed67;">Worker</div>
+                <div class="row pl-1 round justify-content-center" style="font-size: 20px; background-color: #ffb50ee0;">Warrior</div>
+                <div class="row pl-1 round justify-content-center mt-2" style="font-size: 20px;">Colony 2</div>
+                <div class="row pl-1 round justify-content-center" style="font-size: 20px; background-color: #035894d9;">Leafcutter</div>
+                <div class="row pl-1 round justify-content-center" style="font-size: 20px; background-color: #40c1deab;">Worker</div>
+                <div class="row pl-1 round justify-content-center" style="font-size: 20px; background-color: #008196bf;">Warrior</div>
+                <div class="row pl-5" style="padding-top: 150%;"><span><button id="faster" class="btn btn-faster d-none">FASTER</button></span></div>
+                <div class="row pl-5" style="padding-top: 50%;"><span><button id="slower" class="btn btn-slower d-none">SLOWER</button></span></div>
+            </div>
+            <div class="col-7 align-content-center">
+                <table class="table table-w text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            {% for i in 0..war_y_size %}
+                            <th scope="col" class="cell_size">{{ i }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in 0..war_x_size %}
+                        <tr>
+                            <th scope="col" class="cell_size">{{i}}</th>
+                            {% for j in 0..war_y_size %}
+                                {% set break = false %}
+                                {% for bee in war_bees_positions %}
+                                    {% if bee.bee_x_position == i and bee.bee_y_position == j  %}
+                                        {% if bee.bee_colony == 1 %}
+                                            {% if bee.bee_type == 1 %}
+                                                <td class="bee-bumblebee" style="background-color: #c39e17 !important;" data-path="{{ path('act_bee', {colony_id: bee.bee_colony, bee_id: bee.bee_id, x_coord: bee.bee_x_position, y_coord:bee.bee_y_position}) }}"></td>
+                                            {% endif %}
+                                            {% if bee.bee_type == 2 %}
+                                                <td class="bee-bumblebee" data-path="{{ path('act_bee', {colony_id: bee.bee_colony, bee_id: bee.bee_id, x_coord: bee.bee_x_position, y_coord:bee.bee_y_position}) }}"></td>
+                                            {% endif %}
+                                            {% if bee.bee_type == 3 %}
+                                                <td class="bee-bumblebee" style="background-color: #ffb50ee0 !important;" data-path="{{ path('act_bee', {colony_id: bee.bee_colony, bee_id: bee.bee_id, x_coord: bee.bee_x_position, y_coord:bee.bee_y_position}) }}"></td>
+                                            {% endif %}
+                                        {% else %}
+                                            {% if bee.bee_type == 1 %}
+                                                <td class="bee-leafcutter" style="background-color: #035894d9 !important;" data-path="{{ path('act_bee', {colony_id: bee.bee_colony, bee_id: bee.bee_id, x_coord: bee.bee_x_position, y_coord:bee.bee_y_position}) }}"></td>
+                                            {% endif %}
+                                            {% if bee.bee_type == 2 %}
+                                                <td class="bee-leafcutter" data-path="{{ path('act_bee', {colony_id: bee.bee_colony, bee_id: bee.bee_id, x_coord: bee.bee_x_position, y_coord:bee.bee_y_position}) }}"></td>
+                                            {% endif %}
+                                            {% if bee.bee_type == 3 %}
+                                                <td class="bee-leafcutter" style="background-color: #008196bf !important;" data-path="{{ path('act_bee', {colony_id: bee.bee_colony, bee_id: bee.bee_id, x_coord: bee.bee_x_position, y_coord:bee.bee_y_position}) }}"></td>
+                                            {% endif %}
+                                        {% endif %}
+                                        {% set break = true %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% if break != true %}
+                                    <td class="" x-coord="{{i}}" y-coord="{{j}}"></td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4">
+                <div class="row" id="jsonContent"><input type="text" id="warJsonContent" value="{{ warJsonContent }}" style="display: none;"></div>
+                <div class="row float-right pr-3 pt-1"><a href="https://github.com/calebAlmaraz/Imagination_Tech" target="_blank"><img src="images/Github-Logo.png" alt="GitHub" style="width: 30px;"></a></div>
+                <div class="row bee-vs">
+                    <span class="swarmTitle">Swarm Attack</span>
+                </div>
+                <div class="row d-flex justify-content-center"><button id="attack" class="btn btn-start">START</button></div>
+                <div id="round" class="row justify-content-center round d-none">Round 1</div>
+                <div id="console" class="row console pl-5 d-none">Console</div>
+                <div id="actions" class="row pl-4 border border-light" style="white-space: pre-wrap; overflow: auto; max-height: 500px;width: 95%; border-width: 2px;">
+<pre id="rending_actions" style="white-space: pre-wrap; overflow: auto; max-height: 500px; min-height: 400px;">
+</pre>
+                </div>
+                <div class="row justify-content-center pt-3"><span><button id="restart" class="btn btn-restart d-none">RESTART</button></div>
+            </div>
+        </div>
+	</div>
+    <!-- Modal -->
+    <div class="modal fade" id="winnerModal" tabindex="-1" role="dialog" aria-labelledby="winnerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="width: 60% !important; min-width: 60% !important; top: 15%; height: 62% !important;">
+          <div class="modal-content" style="height: 100% !important; border: none !important;">
+            <div class="modal-body">
+                <div id="winner" class="container-fluid text-center" style="height: 100% !important;">
+                    <span id="winnerTitle" class="winnerTitle"></span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>                  
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	{# Javascripts #}
+	{% block javascripts %}
+        {{ encore_entry_script_tags('beeWar') }}
+    {% endblock %}
+</body>
+</html>

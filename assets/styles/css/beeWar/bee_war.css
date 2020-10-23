@@ -1,0 +1,128 @@
+body, html {
+    height: 100%;
+}
+
+code {
+    color: #e83e8c !important;
+}
+
+.bee-bumblebee{
+    background-image: url(./images/bumblebee.png);
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffed67;
+}
+
+.bee-bumblebee-winner{
+    background-image: url(./images/bumblebee.png);
+    background-size: 39%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    height: -webkit-fill-available !important;
+}
+
+.bee-leafcutter{
+    background-image: url(./images/leafcutter.png);
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #40c1deab;
+}
+
+.bee-leafcutter-winner{
+    background-image: url(./images/leafcutter.png);
+    background-size: 50%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    height: -webkit-fill-available !important;
+}
+
+.bee-vs{
+    background-image: url(./images/vs.png);
+    background-size: 70%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 30%;
+}
+
+.swarmTitle{
+    width: 100%;
+    text-align: center;
+    font-family: 'Vampiro One', cursive;
+    font-size: 67px;
+}
+
+.round{
+    width: 100%;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+.console{
+    width: 100%;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+.winnerTitle{
+    font-family: 'Yellowtail', cursive;
+    font-size: 120px;
+    color: white;
+}
+
+.btn-start{
+    background-color: #8ec536 !important;
+    border-color: cadetblue !important;
+    border-width: 2px;
+}
+
+.btn-faster{
+    background-color: #b7ff0a8f !important;
+    border-color: #df3a3a !important;
+    border-width: 2px;
+}
+
+.btn-slower{
+    background-color: #e77634 !important;
+    border-color: #f67a10c7 !important;
+    border-width: 2px;
+}
+
+.btn-restart{
+    background-color: #e747afad !important;
+    border-color: #f67a10c7 !important;
+    border-width: 2px;
+}
+
+.onMovement{
+    background-color: cadetblue !important;
+}
+
+.cell_size {
+    width: 5% !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hideScrollBar::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.hideScrollBar {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.modal-content{
+    background-color: transparent !important;
+}
+
+.modal-body {
+    position:relative;
+    height: 250px;
+}

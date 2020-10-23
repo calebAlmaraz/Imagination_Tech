@@ -1,0 +1,52 @@
+{# templates/symfony/home_page/resume.html.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Josue Almaraz</title>
+	{# CSS #}
+	{% block stylesheets %}
+        {{ encore_entry_link_tags('exercises') }}
+	{% endblock %}
+</head>
+<body>
+	<div class="container w-100 h-100" style="background-color: lightgoldenrodyellow;">
+		<div class="row pb-4">
+			<div class="col-12">
+				<h5>Class declaration</h5>
+				<code>class Data_Structures { ... }</code>
+			</div>
+		</div>
+		<div class="row pb-4">
+			<div class="col-6">
+				<h5>Variables declarations inside a class</h5>
+				<pre style="white-space: pre-wrap;">
+The variables are declared either public, protected or private:
+<code>
+class Data_Structures {
+	public $variable; 
+	protected $variable; 
+	private $variable;
+}</code>
+				</pre>
+			</div>
+			<div class="col-6">
+                <div class="pb-4">
+<pre class="text-wrap">If we call back the variables' property name: the protected var will be identified by a <b>*</b> symbol, the public var by its declaration path, and the public var only by its name.</pre>
+                    <a id="excercise1" class="btn btn-primary" href="{{ path('exercise_variables', {exercises:'1'}) }}">Show properties</a>    
+                </div>
+                <div class="pb-4">
+                    <pre id="excercise1_response" class="text-wrap text-break"><p id="excercise1_response_0"></p><p id="excercise1_response_1"></p><p id="excercise1_response_2"></p></pre>
+                </div>                
+            </div>
+		</div>
+
+	</div>
+
+	{# Javascripts #}
+	{% block javascripts %}
+        {{ encore_entry_script_tags('exercises') }}
+    {% endblock %}
+</body>
+</html>

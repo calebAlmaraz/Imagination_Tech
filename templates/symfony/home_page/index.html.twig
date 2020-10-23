@@ -3,21 +3,20 @@
 <html lang="en">
 <head>
     {% block stylesheets %}
-        {# 'app' must match the first argument to addEntry() in webpack.config.js #}
         {{ encore_entry_link_tags('app') }}
-
-        <!-- Renders a link tag (if your module requires any CSS)
-                <link rel="stylesheet" href="/build/app.css"> -->
-    {% endblock %}
+	{% endblock %}
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<meta charset="utf-8">
 	<title>Data Visualisation</title>
-	<!--<script type="text/javascript" src="d3/d3.v4.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/main.css"/> -->
-
+</head>
 <body>
 	<header class="header-main">
+		<div style="padding-top: 20px; padding-left: 30px; position: fixed;">
+			<a href="https://www.linkedin.com/in/josu%C3%A9-almaraz-34803b178/" target="_blank"><img src="images/linkedin.png" alt="GitHub" style="width: 30px; padding-right:3px;"></a>
+			<a href="https://github.com/calebAlmaraz/Imagination_Tech" target="_blank"><img src="images/Github-Logo.png" alt="GitHub" style="width: 30px;"></a>
+		</div>
 		<div>
-			<h1>Data Visualization Coursework</h1>
+			<h1>Data Visualisation Coursework running on <a href="https://symfony.com/releases/5.1" target="_blank" style="text-decoration: none;">Symfony</a> </h1>
 		</div>
 	</header>
 	<main id="container-main">
@@ -25,7 +24,7 @@
 			<a href="/phd_student">
 				<div class="profile-card">
 					<div class="picture">
-						<img src="images/chica.png">
+						<img src="images/hombre_2.png">
 					</div>
 					<div class="info">
 						<h3>PhD Student</h3>
@@ -33,16 +32,23 @@
 				</div>
 			</a>
 		</div>
+		<div class="user user-two">
+			<a href="/beewar">
+				<div class="profile-card">
+					<div class="picture bee-vs" style="height: 260px !important; width: 500px;">
+					</div>
+					<div class="info">
+						<h3>SWARM ATTACK</h3>
+					</div>
+				</div>
+			</a>
+		</div>
 	</main>
 	<footer>
 		Icons designed by <a href="https://www.flaticon.es/autores/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
-    </footer>
-    {% block javascripts %}
+	</footer>
+	{% block javascripts %}
         {{ encore_entry_script_tags('app') }}
-
-        <!-- Renders app.js & a webpack runtime.js file
-            <script src="/build/runtime.js"></script>
-            <script src="/build/app.js"></script> -->
     {% endblock %}
 </body>
 </html>
